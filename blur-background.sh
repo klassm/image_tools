@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-IN='2019_09_16__18_58_06.jpg'
-OUT="${IN}-convert.jpg"
 WIDTH=4445
 HEIGHT=2500
 
@@ -47,7 +45,7 @@ fi
 
 
 mkdir -p ${OUT_FOLDER}
-for file in ${IN_FOLDER}/*.jpg; do
+for file in ${IN_FOLDER}/*.{jpg,JPG}; do
 	blur $file
 done
 
